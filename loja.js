@@ -4,16 +4,21 @@ class produto{
    this.preco = preco
    }
 }
-class cliente{
+class carrinho{
    constructor(){
     this.produto = []
    }
    adicionarProduto(produto){
      this.produtos.push(produto)
    }
+   listarProdutos() {
+      return this.produtos
+   }
+   calcularTotal() {
+      return this.produtos.reduce((total, p) == total = p.preco, 0)
+   }
 }
-class carrinho{
-
+class cliente{
 }
 class pagameto{
 
